@@ -131,4 +131,4 @@ null:此参数为一个Map<String,String>对象，用于配置网络请求header
                     public void error(int i, String s) {
                         Log.e("post输出",i +","+s.toString());
                     }
-                }).build().post();
+                }).build().postRaw();
