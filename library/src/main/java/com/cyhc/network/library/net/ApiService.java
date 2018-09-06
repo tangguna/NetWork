@@ -73,5 +73,21 @@ public interface ApiService {
     @DELETE
     Call<String> delete(@Url String url, @QueryMap WeakHashMap<String, Object> params);
 
+    /**
+     * 下载固定路径文件
+     * @return
+     */
+    @GET
+    Call<String> downloadFileWithFixedUrl();
+
+    /**
+     * 下载文件与动态Url同步 下载大文件
+     * @param fileUrl
+     *         文件路径
+     * @return
+     */
+    @Streaming
+    @GET
+    Call<String> downloadFileWithDynamicUrlSync(@Url String fileUrl);
 
 }

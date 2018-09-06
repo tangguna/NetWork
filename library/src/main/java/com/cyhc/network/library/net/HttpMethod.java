@@ -11,5 +11,7 @@ public enum  HttpMethod {
     PUT_RAW,
     DELETE,
     UPLOAD,
-    POST_HEADER
+    POST_HEADER,
+    DOWNLOAD_FILE_WITH_FIXED_URL,
+    DOWN_LOAD_FILE_DYNAMIC_URL_SYNC
 }

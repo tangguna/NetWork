@@ -83,7 +83,7 @@ public class RequestClient {
     }
 
     private void request(HttpMethod method){
-        final ApiService service = RestCreator.getApiServece();
+        final ApiService service = RestCreator.getApiService();
         Call<String> call = null;
 
         if (REQUEST != null){
@@ -109,7 +109,7 @@ public class RequestClient {
             case UPLOAD:
                 final RequestBody requestBody = RequestBody.create(MediaType.parse(MultipartBody.FORM.toString()), FILE);
                 final MultipartBody.Part body = MultipartBody.Part.createFormData("file", FILE.getName(), requestBody);
-                call = RestCreator.getApiServece().upload(URL, body);
+                call = RestCreator.getApiService().upload(URL, body);
                 break;
             case PUT:
                 call = service.put(URL,PARAMS);
@@ -119,6 +119,12 @@ public class RequestClient {
                 break;
             case POST_HEADER:
                 call = service.post(URL,BODY);
+                break;
+            case DOWNLOAD_FILE_WITH_FIXED_URL:
+                call = service.downloadFileWithFixedUrl();
+                break;
+            case DOWN_LOAD_FILE_DYNAMIC_URL_SYNC:
+                call = service.downloadFileWithDynamicUrlSync(URL);
                 break;
                 default:
                     break;

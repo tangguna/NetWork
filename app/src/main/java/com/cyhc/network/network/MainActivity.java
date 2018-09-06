@@ -18,6 +18,34 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        test();
+    }
+
+    private void test(){
+        RequestClient.builder()
+                .url("weekly")
+                .params("apikey","0b2bdeda43b5688921839c8ecb20399b")
+                .params("city","北京")
+                .params("client","")
+                .params("udid","")
+                .success(new SuccessListener() {
+                    @Override
+                    public void success(String s) {
+                        Log.d("输出",s.toString());
+                    }
+                })
+                .failure(new FailureListener() {
+                    @Override
+                    public void failure() {
+                        Log.d("输出","错误");
+                    }
+                })
+                .error(new ErrorListener() {
+                    @Override
+                    public void error(int i, String s) {
+                        Log.d("输出",s.toString());
+                    }
+                }).build().get();
     }
 
 }

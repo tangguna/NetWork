@@ -37,7 +37,7 @@ public class RestCreator {
         return HeadersHolder.MAPS;
     }
 
-    public static ApiService getApiServece(){
+    public static ApiService getApiService(){
         return ApiServiceHolder.API_SERVICE;
     }
 

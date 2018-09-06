@@ -17,7 +17,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 /**
- * Created by 傅令杰 on 2017/4/2
+ *
  */
 
 public final class DownloadHandler {
@@ -56,7 +56,7 @@ public final class DownloadHandler {
             REQUEST.onRequestStart();
         }
 
-        RestCreator.getApiServece().download(URL, PARAMS)
+        RestCreator.getApiService().download(URL, PARAMS)
                 .enqueue(new Callback<ResponseBody>() {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
