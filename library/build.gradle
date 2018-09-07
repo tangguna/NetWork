@@ -32,14 +32,15 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
     implementation 'com.squareup.okio:okio:1.14.0'
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
-    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.5.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:3.6.0'
     implementation 'com.trello.rxlifecycle2:rxlifecycle:2.1.0'
     implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+
     implementation 'com.wang.avi:library:2.1.3'
 }
